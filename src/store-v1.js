@@ -116,7 +116,7 @@ console.log(store.getState());
 
 // - -----
 //// functions actions for customer reducers
-function createCutomer(fullName, nationalID) {
+function createCustomer(fullName, nationalID) {
   return {
     type: "customer/createCustomer",
     payload: { fullName, nationalID, createdAt: new Date().toISOString() },
@@ -128,7 +128,7 @@ function updateName(fullName) {
 }
 
 // consume functions:
-store.dispatch(createCutomer("JW", "ldfkj23"));
+store.dispatch(createCustomer("JW", "ldfkj23"));
 console.log(store.getState());
 
 store.dispatch(deposit(250));
